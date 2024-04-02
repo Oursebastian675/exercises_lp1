@@ -42,8 +42,13 @@ public class Ejercicios {
      *         Lo siento, usted ha reprobado el examen.
      */
     public String ejercicio2(double calificacion) {
-        
-        return "";
+        if (calificacion<=3.4) {
+            return "reprobado";
+        }
+        else if (calificacion>=3.5) {
+            return "aprovado";
+        }
+        return null;
     }
 
     // ----------------------------------------------------------------------------------------
