@@ -64,9 +64,20 @@ public class Ejercicios {
      *         basado en el precio de entrada.           
      */
     public double ejercicio3(double precio) {
-        // Implementar solución
-        return 0;
+         if (precio >= 50000) {
+            return precio * 0.9; // Aplicar descuento del 10%
+        } else {
+            return precio; // No se aplica descuento
+        }
     }
+         public static void main(String[] args) {
+        Ejercicio ejercicio = new Ejercicio();
+        double precioOriginal = 60000;
+        double precioFinal = ejercicio.ejercicio3(precioOriginal);
+        System.out.println("Precio original: " + precioOriginal);
+        System.out.println("Precio final: " + precioFinal);
+    }
+    
 
     // ----------------------------------------------------------------------------------------
 
@@ -96,9 +107,35 @@ public class Ejercicios {
      */
     public String ejercicio4(int tipoFigura, double ladoCuadrado, double baseTriangulo, double alturaTriangulo,
             double radioCirculo) {
-        // Implementar solución
-        return "";
+       double area = 0.0;
+        switch (tipoFigura) {
+            case 1: // Cuadrado
+                area = ladoCuadrado * ladoCuadrado;
+                break;
+            case 2: // Triángulo
+                area = (baseTriangulo * alturaTriangulo) / 2;
+                break;
+            case 3: // Círculo
+                area = Math.PI * radioCirculo * radioCirculo;
+                break;
+            default:
+                return "Tipo de figura no válida.";
+        }
+        return "El área de la figura es: " + area;
     }
+
+    public static void main(String[] args) {
+        Ejercicio ejercicio = new Ejercicio();
+        int tipoFigura = 3; // Tipo de figura: 1-Cuadrado, 2-Triángulo, 3-Círculo
+        double ladoCuadrado = 0; // Longitud del lado del cuadrado
+        double baseTriangulo = 0; // Base del triángulo
+        double alturaTriangulo = 0; // Altura del triángulo
+        double radioCirculo = 5; // Radio del círculo
+        String resultado = ejercicio.ejercicio4(tipoFigura, ladoCuadrado, baseTriangulo, alturaTriangulo,
+                radioCirculo);
+        System.out.println(resultado);
+    }
+}
 
     // ----------------------------------------------------------------------------------------
 
@@ -113,7 +150,21 @@ public class Ejercicios {
      *         `num2` y `num3`.
      */
     public int ejercicio5(int num1, int num2, int num3) {
-        // Implementar solución
-        return 0;
+       if (num1 <= num2 && num1 <= num3) {
+            return num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            return num2;
+        } else {
+            return num3;
+        }
     }
-}
+
+    public static void main(String[] args) {
+        Ejercicio ejercicio = new Ejercicio();
+        int num1 = 5;
+        int num2 = 3;
+        int num3 = 8;
+        int menor = ejercicio.ejercicio5(num1, num2, num3);
+        System.out.println("El menor de los tres números es: " + menor);
+    }
+
