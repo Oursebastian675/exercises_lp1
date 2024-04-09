@@ -124,18 +124,19 @@ public class Ejercicios {
         return "El área de la figura es: " + area;
     }
 
-    public static void main(String[] args) {
-        Ejercicio ejercicio = new Ejercicio();
+
+        Ejercicio ejercicio4 = new Ejercicio();
         int tipoFigura = 3; // Tipo de figura: 1-Cuadrado, 2-Triángulo, 3-Círculo
         double ladoCuadrado = 0; // Longitud del lado del cuadrado
         double baseTriangulo = 0; // Base del triángulo
         double alturaTriangulo = 0; // Altura del triángulo
         double radioCirculo = 5; // Radio del círculo
-        String resultado = ejercicio.ejercicio4(tipoFigura, ladoCuadrado, baseTriangulo, alturaTriangulo,
+        String resultado = ejercicio4.ejercicio4(tipoFigura, ladoCuadrado, baseTriangulo, alturaTriangulo,
                 radioCirculo);
         System.out.println(resultado);
-    }
+    
 }
+
 
     // ----------------------------------------------------------------------------------------
 
@@ -149,22 +150,26 @@ public class Ejercicios {
      *         `num1`,
      *         `num2` y `num3`.
      */
-    public int ejercicio5(int num1, int num2, int num3) {
-       if (num1 <= num2 && num1 <= num3) {
-            return num1;
-        } else if (num2 <= num1 && num2 <= num3) {
-            return num2;
-        } else {
-            return num3;
-        }
+    
+
+    
+     if (num1 <= num2 && num1 <= num3) {
+        return num1;
+    } else if (num2 <= num1 && num2 <= num3) {
+        return num2;
+    } else {
+        return num3;
     }
 
-    public static void main(String[] args) {
-        Ejercicio ejercicio = new Ejercicio();
-        int num1 = 5;
-        int num2 = 3;
-        int num3 = 8;
-        int menor = ejercicio.ejercicio5(num1, num2, num3);
-        System.out.println("El menor de los tres números es: " + menor);
+
+Ejercicio ejercicio = new Ejercicio();
+    int num1 = 5;
+    int num2 = 3;
+    int num3 = 8;
+    int menor = ejercicio.ejercicio5(num1, num2, num3);
+    public int ejercicio5(int num12, int num22, int num32) {
+
+        throw new UnsupportedOperationException("Unimplemented method 'ejercicio5'");
     }
+    System.out.println("El menor de los tres números es: " + menor);
 
