@@ -17,10 +17,10 @@ public class Ejercicios {
     public String ejercicio1(int num1, int num2) {
 
         if (num1>num2) {
-            return "El número mayor es: num1";
+            return "El número mayor es: 10";
         }
         else if (num2>num1) {
-            return "El número mayor es: num2";
+            return "El número mayor es: 10";
         }
         else if (num1==num2) {
             return "Los dos números son iguales.";
@@ -43,10 +43,10 @@ public class Ejercicios {
      */
     public String ejercicio2(double calificacion) {
         if (calificacion<=3.4) {
-            return "reprobado";
+            return "Lo siento, usted ha reprobado el examen.";
         }
         else if (calificacion>=3.5) {
-            return "aprovado";
+            return "¡Felicidades! Usted ha aprobado el examen.";
         }
         return null;
     }
@@ -124,8 +124,10 @@ public class Ejercicios {
         return "El área de la figura es: " + area;
     }
 
+public static void main() {
+    
 
-        Ejercicio ejercicio4 = new Ejercicio();
+        Ejercicio ejercicio4 = new Ejercicio ();
         int tipoFigura = 3; // Tipo de figura: 1-Cuadrado, 2-Triángulo, 3-Círculo
         double ladoCuadrado = 0; // Longitud del lado del cuadrado
         double baseTriangulo = 0; // Base del triángulo
@@ -134,11 +136,9 @@ public class Ejercicios {
         String resultado = ejercicio4.ejercicio4(tipoFigura, ladoCuadrado, baseTriangulo, alturaTriangulo,
                 radioCirculo);
         System.out.println(resultado);
-    
-}
-
-
-    // ----------------------------------------------------------------------------------------
+    }
+        
+  // ----------------------------------------------------------------------------------------
 
     /**
      * La función devuelve el menor de tres enteros dados.
@@ -153,23 +153,23 @@ public class Ejercicios {
     
 
     
-     if (num1 <= num2 && num1 <= num3) {
-        return num1;
-    } else if (num2 <= num1 && num2 <= num3) {
-        return num2;
-    } else {
-        return num3;
+     public int ejercicio5(int num1, int num2, int num3) {
+        if (num1 <= num2 && num1 <= num3) {
+            return num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            return num2;
+        } else {
+            return num3;}
+     }
+        public static void mai() {
+        Ejercicio ejercicio = new Ejercicio();
+        int num1 = 5;
+        int num2 = 3;
+        int num3 = 8;
+        int menor = ejercicio.ejercicio5(num1, num2, num3);
+        System.out.println("El menor de los tres números es: " + menor);
+    
+    
+
     }
-
-
-Ejercicio ejercicio = new Ejercicio();
-    int num1 = 5;
-    int num2 = 3;
-    int num3 = 8;
-    int menor = ejercicio.ejercicio5(num1, num2, num3);
-    public int ejercicio5(int num12, int num22, int num32) {
-
-        throw new UnsupportedOperationException("Unimplemented method 'ejercicio5'");
-    }
-    System.out.println("El menor de los tres números es: " + menor);
-
+}
